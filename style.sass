@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900')
+
+$font: 'Lato', sans-serif
+$big: 'Montserrat', sans-serif
+
+$pink: #D87368
+$white: #F6F4F3
+$blue: #276FBF
+$yellow: #F0A202
+$text-shadow: #1e8375e8
+$background: #18B19D
+
+$star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
+
+html
+    display: grid
+    min-height: 100%
+
+body
+    display: grid
+    background: $background
+    margin: 0px
+
+marquee
+    background-color: $pink
+    height: 1.8em
+    padding-top: .3em
+    color: $white
+    font-size: 1.3em
+
+.container
+    margin: auto
+    margin-top: 0px
+    overflow: hidden
+    width: 80%
+    height: 480px
+
+.distance
+    text-align: center
+
+    .txt
+        display: block
+        font-size: 1.5em
+        font-weight: bold
+        color: $white
+        position: relative
+
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: 52%
+            background: $white
+            width: 22.5em
+            height: 1px
+
+        &::before
+            left: 0%
+
+        &::after
+            right: 0%
+
+h1
+    font-family: $font
+    text-align: center
+    margin: 0px
+    font-size: 5em
+    font-style: italic
+    text-shadow: 2px 2px $text-shadow
+    text-transform: uppercase
+    letter-spacing: 5px
+    color: $white
+
+h3
+    text-align: center
+    font-size: 3em
+    font-style: italic
+    text-shadow: 2px 2px $text-shadow
+    margin: 0px
+    color: $white
+
+#timer
+    color: $white
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: 5px
+    margin-top: 5%
+
+    .time-unit
+        font-family: $font
+        font-size: 1.5em
+        font-weight: bold
+        padding-left: .5em
+
+.days, .hours, .minutes, .seconds
+    display: inline-block
+    padding: .1em
+    font-size: 2em
+    font-weight: bold
+    min-width: 45px
+    border-radius: 5px
+    background: $white
+    color: $pink
+    text-align: center
+
+.share
+    float: right
+    color: $white
+    font-size: 1.5em
+    padding-top: 1.3em
+    a
+        color: $white
+    i
+        padding: 0px .4em
