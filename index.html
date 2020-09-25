@@ -4,36 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="stylesheet" href="./static/css/style.min.css">
-    <script src="https://kit.fontawesome.com/7af2e55548.js" crossorigin="anonymous"></script>
     <script src="./static/js/ajax.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <marquee direction="up" behavior="slide" scrollamount="5">[震撼！] 跑馬燈在網址列底下！網友都說...</marquee>
-
     <div class="container">
-        <div class="distance">
+        <div id="title">
+            <img class="line-top" src="./static/image/toplinexxxhdpi.png">
             <span class="txt">距離</span>
+            <img src="./static/image/titlexxxhdpi.png">
         </div>
-        <h1>瘦肉精豬肉進口</h1>
-        <h3>/AKA 台灣國際地位提升/</h3>
         <ul id="timer">
-            <span class="time-unit">還有</span>
-            <li class="days" id="days"></li><span class="time-unit">天</span>
-            <li class="hours" id="hours"></li><span class="time-unit">時</span>
-            <li class="minutes" id="minutes"></li><span class="time-unit">分</span>
-            <li class="seconds" id="seconds"></li><span class="time-unit">秒</span>
+            <li class="time-unit">還有</li>
+            <li class="time-unit">
+                <div class="days" id="days"></div>&nbsp;天
+            </li>
+            <li class="time-unit">
+                <div class="hours" id="hours"></div>&nbsp;時
+            </li>
+            <li class="time-unit">
+                <div class="minutes" id="minutes"></div>&nbsp;分
+            </li>
+            <li class="time-unit">
+                <div class="seconds" id="seconds"></div>&nbsp;秒
+            </li>
         </ul>
-        <hr>
-        <div class="share">
-            <span class="social-txt">力挺台灣豬請分享</span><br>
-            <a href=""><i class="fab fa-line"></i></a>
-            <a onclick="share_fb()"><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fas fa-share-alt"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
+        <div id="footer">
+            <img class="line-bottom" src="./static/image/bottomlinexxxhdpi.png">
+            <img class="pig-img" src="./static/image/pigxxxhdpi.png">
+            <div class="share">
+                <span class="social-txt">力挺台灣豬請分享</span><br>
+                <a href=""><img src="./static/image/Linexxxhdpi.png" alt=""></a>
+                <a onclick="share_fb()"><img src="./static/image/fbxxxhdpi.png"></a>
+                <a href=""><img src="./static/image/sharexxxhdpi.png" alt=""><i class="fas fa-share-alt"></i></a>
+                <a href=""><img src="./static/image/twitterxxxhdpi.png" alt=""></a>
+            </div> 
         </div>
     </div>
 </body>

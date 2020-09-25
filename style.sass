@@ -1,113 +1,149 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900')
-
-$font: 'Lato', sans-serif
-$big: 'Montserrat', sans-serif
-
-$pink: #D87368
 $white: #F6F4F3
-$blue: #276FBF
-$yellow: #F0A202
-$text-shadow: #1e8375e8
+$pink: #D87368
 $background: #18B19D
 
-$star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
 
 html
-    display: grid
     min-height: 100%
 
 body
-    display: grid
-    background: $background
+    background: #18B19D url(../image/backgroundxxxhdpi.png)
+    background-size: 130%
     margin: 0px
 
 marquee
-    background-color: $pink
     height: 1.8em
     padding-top: .3em
+    background-color: $pink
     color: $white
-    font-size: 1.3em
+    font-size: 1.1rem
 
 .container
-    margin: auto
-    margin-top: 0px
-    overflow: hidden
-    width: 80%
-    height: 480px
+    width: 50%
+    margin: 0 auto
+    font-size: 20px
 
-.distance
-    text-align: center
+#title
+    width: 100%
+    height: 49vh
+    position: relative
 
     .txt
+        width: 50vw
+        top: 12vh
+        position: absolute
         display: block
-        font-size: 1.5em
+        text-align: center
+        font-size: 2.2rem
         font-weight: bold
         color: $white
-        position: relative
+        z-index: 1
 
-        &::before, &::after
-            content: ''
-            position: absolute
-            top: 52%
-            background: $white
-            width: 22.5em
-            height: 1px
+    .line-top
+        width: 50vw
+        height: .15rem
+        top: 15vh
+        position: absolute
+        z-index: 0
 
-        &::before
-            left: 0%
-
-        &::after
-            right: 0%
-
-h1
-    font-family: $font
-    text-align: center
-    margin: 0px
-    font-size: 5em
-    font-style: italic
-    text-shadow: 2px 2px $text-shadow
-    text-transform: uppercase
-    letter-spacing: 5px
-    color: $white
-
-h3
-    text-align: center
-    font-size: 3em
-    font-style: italic
-    text-shadow: 2px 2px $text-shadow
-    margin: 0px
-    color: $white
+    img
+        width: 50vw
+        top: 8vh
+        position: absolute
+        z-index: 2
 
 #timer
+    width: 100%
+    height: 8vh
     color: $white
+    padding: 0px
+    margin: 0px
+    position: relative
     text-align: center
-    text-transform: uppercase
-    letter-spacing: 5px
-    margin-top: 5%
 
-    .time-unit
-        font-family: $font
-        font-size: 1.5em
+    li.time-unit
+        display: inline-block
+        font-size: 2.6rem
+        text-align: center
+
+    .days, .hours, .minutes, .seconds
+        min-width: 4rem
+        height: 4rem
+        padding: 1px 14px 2px 14px
+        text-align: center
+        font-size: 3rem
         font-weight: bold
-        padding-left: .5em
+        border-radius: 10px
+        background: $white
+        color: $pink
+        display: inline-block
 
-.days, .hours, .minutes, .seconds
-    display: inline-block
-    padding: .1em
-    font-size: 2em
-    font-weight: bold
-    min-width: 45px
-    border-radius: 5px
-    background: $white
-    color: $pink
-    text-align: center
+#footer
+    position: relative
+    width: 100%
+    height: 20vh
 
-.share
-    float: right
-    color: $white
-    font-size: 1.5em
-    padding-top: 1.3em
-    a
+    .line-bottom
+        width: 50vw
+        height: .2rem
+        padding-top: 32px
+        position: absolute
+
+    .pig-img
+        width: 75%
+        left: -5%
+        padding-top: 10px
+        position: absolute
+
+    .share
         color: $white
-    i
-        padding: 0px .4em
+        float: right
+        font-size: 1.5rem
+        font-weight: bold
+        padding-top: 100px
+        text-align: right
+        a
+            color: $white
+        img
+            padding: 10px 1.5px
+            width: 5.5%
+
+
+@media only screen and (max-width: 1400px)
+    #title
+        height: 40vh
+
+@media only screen and (max-width: 1200px)
+    #title
+        height: 38vh
+        img
+            top: 10vh
+    #footer
+        .share
+            font-size: 1.2rem
+
+    #timer
+        li.time-unit
+            font-size: 2rem
+            padding-top: 20px
+            
+        .days, .hours, .minutes, .seconds
+            font-size: 1.5rem
+            min-width: 1.8rem
+            height: 2rem
+
+    
+@media only screen and (max-width: 1000px)
+    #timer
+        li.time-unit
+            font-size: 1.5rem
+            padding-top: 20px
+            
+        .days, .hours, .minutes, .seconds
+            font-size: 1.5rem
+            min-width: 2rem
+            height: 2rem
+
+    #footer
+        .share
+            font-size: 1.1rem
