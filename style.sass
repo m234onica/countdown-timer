@@ -10,12 +10,53 @@ body
     background-size: 130%
     margin: 0px
 
-marquee
-    height: 1.8em
-    padding-top: .3em
+.marquee
     background-color: $pink
     color: $white
-    font-size: 1.1rem
+    margin: 0 auto
+    width: 100%
+    height: 30px
+    white-space: nowrap
+    overflow: hidden
+    position: relative
+
+    &::before, &::after
+        position: absolute
+        top: 0
+        width: 0px
+        height: 30px
+        content: ""
+        z-index: 1
+
+    &::before
+        left: 0
+        background: linear-gradient(to right, #ccc 10%, transparent 80%)
+
+    &::after
+        right: 0
+        background: linear-gradient(to left, #ccc 10%, transparent 80%)
+
+    &__content
+        width: 1000%
+        display: flex
+        line-height: 30px
+        animation: marquee 50s linear infinite forwards
+
+        .list-inline
+            display: flex
+            justify-content: space-around
+            width: 100%
+            /* reset list */
+            list-style: none
+            padding: 0
+            margin: 0
+
+@keyframes marquee
+    0%
+        transform: translateX(0)
+
+    100%
+        transform: translateX(-66.6%)
 
 .container
     width: 50%
@@ -119,7 +160,6 @@ marquee
             height: 2.6rem
             padding: 0px 5px 3px 5px
 
-
 @media only screen and (max-width: 1200px)
     #title
         height: 40vh
@@ -140,6 +180,10 @@ marquee
             height: 2rem
 
 @media only screen and (max-width: 1000px)
+    .marquee
+        .marquee__content
+            width: 2500%
+
     #timer
         li.time-unit
             font-size: 1.4rem
@@ -158,6 +202,10 @@ marquee
             font-size: 1.1rem
 
 @media only screen and (max-width: 768px)
+    .marquee
+        .marquee__content
+            width: 1500%
+
     .container
         width: 95%
         margin: 0 auto

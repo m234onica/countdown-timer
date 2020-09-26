@@ -1,3 +1,12 @@
+$.get("./marquee.txt", function (data) {
+    data = data.split("\n");
+    data.forEach(function (line) {
+        $("ul.list-inline").append(
+            $("<li></li>").html(line)
+        )
+    })
+});
+
 var second = 1000,
     minute = second * 60,
     hour = minute * 60,
