@@ -12,20 +12,24 @@ var srcJS = "./**/ajax.js",
     srcIMG = "./**/*.png";
 
 gulp.task("clean", function () {
-    return gulp.src([ 
+    return gulp.src([
         "docs/**/*.js",
         "docs/**/*.css",
         "docs/*.html",
         "rev/"
     ]).pipe(clean());
 });
-
-gulp.task("revJS", function() {
+gulp.task("uglify", function () {
     return gulp.src(srcJS)
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest("./"))
+})
+
+gulp.task("revJS", function () {
+    return gulp.src("./static/js/*.min.js")
         .pipe(rev())
-        .pipe(gulp.dest("docs/"))
+        .pipe(gulp.dest("docs/static/js"))
         .pipe(rev.manifest())
         .pipe(gulp.dest("rev/js"));
 });
@@ -46,7 +50,7 @@ gulp.task("revHTML", function () {
         .pipe(gulp.dest("docs/"));
 });
 
-gulp.task("txt", function() {
+gulp.task("txt", function () {
     return gulp.src("./marquee.txt")
         .pipe(gulp.dest("docs/"))
 })
@@ -60,6 +64,7 @@ gulp.task("image-min", function () {
 gulp.task("default",
     gulp.series(
         "clean",
+        "uglify",
         "revJS",
         "revCSS",
         "revHTML",

@@ -37,3 +37,9 @@ share_fb = function () {
     options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
     window.open(url, 'sharer', options);
 }
+
+share_ur = function () {
+    $(function() {
+        $(".share-url").share()
+    });
+};
