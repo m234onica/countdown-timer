@@ -46,6 +46,11 @@ gulp.task("revHTML", function () {
         .pipe(gulp.dest("docs/"));
 });
 
+gulp.task("txt", function() {
+    return gulp.src("./marquee.txt")
+        .pipe(gulp.dest("docs/"))
+})
+
 gulp.task("image-min", function () {
     return gulp.src(srcIMG)
         .pipe(imagemin())
@@ -58,6 +63,7 @@ gulp.task("default",
         "revJS",
         "revCSS",
         "revHTML",
+        "txt",
         "image-min",
     ), function (done) {
         done();
