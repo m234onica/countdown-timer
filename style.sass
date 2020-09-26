@@ -1,5 +1,5 @@
 $white: #F6F4F3
-$pink: #D87368
+$pink: #d4695d
 $background: #18B19D
 
 html
@@ -53,7 +53,7 @@ marquee
 
 #timer
     width: 100%
-    height: 8vh
+    height: 10vh
     color: $white
     padding: 0px
     margin: 0px
@@ -62,7 +62,7 @@ marquee
 
     li.time-unit
         display: inline-block
-        font-size: 2.6rem
+        font-size: 2.2rem
         text-align: center
 
     .days, .hours, .minutes, .seconds
@@ -109,12 +109,20 @@ marquee
             width: 5.5%
 
 @media only screen and (max-width: 1400px)
-    #title
-        height: 40vh
+    #timer
+        li.time-unit
+            font-size: 2rem
+            padding-top: 20px
+
+        .days, .hours, .minutes, .seconds
+            font-size: 2.2rem
+            height: 2.6rem
+            padding: 0px 5px 3px 5px
+
 
 @media only screen and (max-width: 1200px)
     #title
-        height: 38vh
+        height: 40vh
         img
             top: 10vh
     #footer
