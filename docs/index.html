@@ -20,8 +20,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./static/css/style-736429e145.min.css">
-    <script type="text/javascript" src="./static/js/jquery-a3d3ac71f4.snsShare.min.js"></script>
-    <script type="text/javascript" src="./static/js/ajax-6a73700db6.min.js"></script>
+    <script type="text/javascript" src="./static/js/all-585ed35195.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -36,22 +35,22 @@
     <div class="container">
         <div id="title">
             <img class="line-top" src="./static/image/toplinexxxhdpi.png">
-            <span class="txt">距離</span>
-            <img src="./static/image/titlexxxhdpi.png">
+            <span class="txt"></span>
+            <img id="title-img" src="">
         </div>
         <ul id="timer">
             <li class="time-unit">還有</li>
             <li class="time-unit">
-                <div class="days" id="days"></div>&nbsp;天
+                <div class="days" id="days">0</div>&nbsp;天
             </li>
             <li class="time-unit">
-                <div class="hours" id="hours"></div>&nbsp;時
+                <div class="hours" id="hours">0</div>&nbsp;時
             </li>
             <li class="time-unit">
-                <div class="minutes" id="minutes"></div>&nbsp;分
+                <div class="minutes" id="minutes">0</div>&nbsp;分
             </li>
             <li class="time-unit">
-                <div class="seconds" id="seconds"></div>&nbsp;秒
+                <div class="seconds" id="seconds">0</div>&nbsp;秒
             </li>
         </ul>
         <div id="footer">
@@ -67,9 +66,7 @@
         </div>
     </div>
     <script>
-        $(function () {
-            $(".share-btn").snsShare("", window.location.href);
-        })
+        
     </script>
 </body>
 

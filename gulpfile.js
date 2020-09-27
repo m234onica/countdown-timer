@@ -1,4 +1,5 @@
 var gulp = require("gulp"),
+    concat = require("gulp-concat"),
     uglify = require("gulp-uglify"),
     rev = require("gulp-rev"),
     revCollector = require("gulp-rev-collector"),
@@ -20,6 +21,7 @@ gulp.task("clean", function () {
 });
 gulp.task("uglify", function () {
     return gulp.src(srcJS)
+        .pipe(concat("all.js"))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("./static/js/min/"))

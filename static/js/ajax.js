@@ -46,3 +46,8 @@ function timeBetweenDates(toDate) {
         $("#title-img").attr("src", "./static/image/titlexxxhdpi.png");
     }
 }
+
+// share link
+$(function () {
+    $(".share-btn").snsShare("", window.location.href);
+})
