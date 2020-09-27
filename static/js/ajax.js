@@ -32,14 +32,8 @@ var countDown = new Date('DEC 31, 2021 00:00:00').getTime(),
     }, second)
 
 
-share_fb = function () {
-    url = 'https://www.facebook.com/sharer/sharer.php??display=popup&u=' + window.location.href;
-    options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
-    window.open(url, 'sharer', options);
-}
-
-share_ur = function () {
-    $(function() {
-        $(".share-url").share()
-    });
-};
+// share_fb = function () {
+//     url = 'https://www.facebook.com/sharer/sharer.php??display=popup&u=' + window.location.href;
+//     options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+//     window.open(url, 'sharer', options);
+// }
