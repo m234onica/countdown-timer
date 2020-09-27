@@ -10,7 +10,7 @@ $.get("./marquee.txt", function (data) {
 
 // countdown timer
 var timer;
-var countDown = new Date('SEP 31, 2020 22:42:00');
+var countDown = new Date('SEP 31, 2020 23:59:59');
 
 timer = setInterval(function () {
     timeBetweenDates(countDown);
