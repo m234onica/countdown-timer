@@ -9,14 +9,12 @@ var gulp = require("gulp"),
 var srcJS = "./static/js/*.js",
     srcCSS = "./**/*.css",
     srcHTML = "./*.html",
-    srcIMG = "./**/*.png";
+    srcIMG = "./static/image/**/*";
 
 gulp.task("clean", function () {
     return gulp.src([
         "static/js/min/*.js",
-        "docs/**/*.js",
-        "docs/**/*.css",
-        "docs/*.html",
+        "docs/",
         "rev/"
     ]).pipe(clean());
 });
@@ -59,7 +57,7 @@ gulp.task("txt", function () {
 gulp.task("image-min", function () {
     return gulp.src(srcIMG)
         .pipe(imagemin())
-        .pipe(gulp.dest("docs/"));
+        .pipe(gulp.dest("docs/static/image/"));
 });
 
 gulp.task("default",
