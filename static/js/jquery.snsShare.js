@@ -79,7 +79,7 @@ jQuery.fn.snsShare = function (message, url) {
                         document.body.appendChild(input);
                         input.select();
                         document.execCommand('copy');
-                        alert("複製成功！\n" + input.value);
+                        alert("複製成功！\n");
                         document.body.removeChild(input);
                         break;
                     default:
