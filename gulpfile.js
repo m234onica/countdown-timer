@@ -6,13 +6,14 @@ var gulp = require("gulp"),
     rename = require("gulp-rename"),
     clean = require("gulp-clean");
 
-var srcJS = "./**/ajax.js",
+var srcJS = "./static/js/*.js",
     srcCSS = "./**/*.css",
     srcHTML = "./*.html",
     srcIMG = "./**/*.png";
 
 gulp.task("clean", function () {
     return gulp.src([
+        "static/js/min/*.js",
         "docs/**/*.js",
         "docs/**/*.css",
         "docs/*.html",
@@ -23,11 +24,11 @@ gulp.task("uglify", function () {
     return gulp.src(srcJS)
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("./"))
+        .pipe(gulp.dest("./static/js/min/"))
 })
 
 gulp.task("revJS", function () {
-    return gulp.src("./static/js/*.min.js")
+    return gulp.src("./static/js/min/*.min.js")
         .pipe(rev())
         .pipe(gulp.dest("docs/static/js"))
         .pipe(rev.manifest())

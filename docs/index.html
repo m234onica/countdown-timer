@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./static/css/style-b2b20b7981.min.css">
-    <script type="text/javascript" src="./static/js/ajax-9e438c96df.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <link rel="stylesheet" href="./static/css/style-736429e145.min.css">
+    <script type="text/javascript" src="./static/js/min/ajax-6a73700db6.min.js"></script>
+    <script type="text/javascript" src="./static/js/min/jquery-9969ed508e.snsShare.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -44,13 +46,21 @@
             <img class="pig-img" src="./static/image/pigxxxhdpi.png">
             <div class="share">
                 <span class="social-txt">力挺台灣豬請分享</span><br>
-                <a href=""><img src="./static/image/Linexxxhdpi.png"></a>
-                <a onclick="location.href=share_fb()"><img src="./static/image/fbxxxhdpi.png"></a>
-                <a class="share_url"><img src="./static/image/sharexxxhdpi.png"></a>
-                <a href=""><img src="./static/image/twitterxxxhdpi.png" alt=""></a>
+                <a class="share-btn" data-sns="line"><img src="./static/image/Linexxxhdpi.png"></a>
+                <a class="share-btn" data-sns="facebook"><img src="./static/image/fbxxxhdpi.png"></a>
+                <a class="share-btn" data-sns="link"><img src="./static/image/sharexxxhdpi.png"></a>
+                <a class="share-btn" data-sns="twitter"><img src="./static/image/twitterxxxhdpi.png"></a>
             </div>
         </div>
     </div>
+    <script>
+        $(function () {
+            $(".share-btn").snsShare(window.location.href);
+        })
+        $(function () {
+            new Clipboard('#copy-button');
+        });
+    </script>
 </body>
 
 </html>
