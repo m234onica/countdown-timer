@@ -1,3 +1,4 @@
+// marquee
 $.get("./marquee.txt", function (data) {
     data = data.split("\n");
     data.forEach(function (line) {
@@ -7,33 +8,41 @@ $.get("./marquee.txt", function (data) {
     })
 });
 
-var second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+// countdown timer
+var timer;
+var countDown = new Date('SEP 31, 2020 22:42:00');
 
-var countDown = new Date('DEC 31, 2021 00:00:00').getTime(),
-    x = setInterval(function () {
+timer = setInterval(function () {
+    timeBetweenDates(countDown);
+}, 1000);
 
-        var now = new Date().getTime(),
-            distance = countDown - now;
-
-        document.getElementById('days').innerText = Math.floor(distance / (day)),
-            document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-
-        //do something later when date is reached
-        //if (distance < 0) {
-        //  clearInterval(x);
-        //  'IT'S MY BIRTHDAY!;
-        //}
-
-    }, second)
-
-
-// share_fb = function () {
-//     url = 'https://www.facebook.com/sharer/sharer.php??display=popup&u=' + window.location.href;
-//     options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
-//     window.open(url, 'sharer', options);
-// }
+function timeBetweenDates(toDate) {
+    var dateEntered = toDate;
+    var now = new Date();
+    var difference = dateEntered.getTime() - now.getTime();
+    
+    if (difference <= 0) {
+        
+        // Timer done
+        clearInterval(timer);
+        $(".txt").text("進入");
+        $("#title-img").attr("src", "./static/image/timeout/title2xxxhdpi.png");
+    } else {
+        
+        var seconds = Math.floor(difference / 1000);
+        var minutes = Math.floor(seconds / 60);
+        var hours = Math.floor(minutes / 60);
+        var days = Math.floor(hours / 24);
+        
+        hours %= 24;
+        minutes %= 60;
+        seconds %= 60;
+        
+        $(".days").text(days);
+        $(".hours").text(hours);
+        $(".minutes").text(minutes);
+        $(".seconds").text(seconds);
+        $(".txt").text("距離");
+        $("#title-img").attr("src", "./static/image/titlexxxhdpi.png");
+    }
+}
