@@ -53,7 +53,7 @@ jQuery.fn.snsShare = function (message, url) {
             var element, snsType = jQuery(this).attr('data-sns'), protocol;
             if (typeof (snsType) === 'string' && jQuery.inArray(snsType, types) !== -1) {
                 if (typeof (message) === 'undefined') {
-                    message = window.location;
+                    message = "";
                 }
                 protocol = location.protocol;
                 switch (snsType) {
@@ -69,7 +69,7 @@ jQuery.fn.snsShare = function (message, url) {
                         break;
                     case 'twitter':
                         element = getAtagElement();
-                        element.href = protocol + '//twitter.com/share/?' + encodeURIComponent(message + ' ' + url);
+                        element.href = protocol + '//twitter.com/share?text=' + encodeURIComponent(message) + '&url=' + url;
                         element.dispatchEvent(makeMouseClickEvent());
                         break;
                     case 'link':

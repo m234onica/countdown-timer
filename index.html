@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
     <link rel="stylesheet" href="./static/css/style.min.css">
-    <script type="text/javascript" src="./static/js/min/ajax.min.js"></script>
-    <script type="text/javascript" src="./static/js/min/jquery.snsShare.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.snsShare.min.js"></script>
+    <script type="text/javascript" src="./static/js/ajax.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -55,11 +54,8 @@
     </div>
     <script>
         $(function () {
-            $(".share-btn").snsShare(window.location.href);
+            $(".share-btn").snsShare("", window.location.href);
         })
-        $(function () {
-            new Clipboard('#copy-button');
-        });
     </script>
 </body>
 
