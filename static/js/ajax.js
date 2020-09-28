@@ -43,7 +43,6 @@ function timeBetweenDates(toDate) {
         $(".minutes").text(minutes);
         $(".seconds").text(seconds);
         $(".txt").text("距離");
-        $("#title-img").attr("src", "./static/image/titlexxxhdpi.png");
     }
 }
 

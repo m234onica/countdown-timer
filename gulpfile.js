@@ -15,7 +15,9 @@ var srcJS = "./static/js/*.js",
 gulp.task("clean", function () {
     return gulp.src([
         "static/js/min/*.js",
-        "docs/",
+        "docs/**/*.js",
+        "docs/**/*.css",
+        "docs/**/*.html",
         "rev/"
     ]).pipe(clean());
 });
