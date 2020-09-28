@@ -72,7 +72,7 @@ gulp.task("default",
         "revCSS",
         "revHTML",
         "txt",
-        "image-min",
+        // "image-min",
     ), function (done) {
         done();
     });
