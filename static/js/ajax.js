@@ -35,6 +35,7 @@ function timeBetweenDates(toDate) {
         $(".txt").text("進入");
         $(".timer-txt").text("已經");
         $("#title-img").attr("src", "./static/image/timeout/title2xxxhdpi.png");
+        $("#pig-img").attr("src", "./static/image/timeout/pig2xxxhdpi.png");
 
         $(".days").text(Math.abs(days));
         $(".hours").text(Math.abs(hours));
