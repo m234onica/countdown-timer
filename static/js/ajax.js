@@ -53,4 +53,29 @@ function timeBetweenDates(toDate) {
 // share link
 $(function () {
     $(".share-btn").snsShare("", window.location.href);
+
+    var btn = document.getElementById("share-link");
+
+    var shareData = {
+        url: window.location.href,
+        title: "瘦肉精豬肉進口倒數計時器",
+        text: "萊豬不要來，力挺台灣豬！瘦肉精豬肉，我吞不下去！"
+    };
+
+    btn.addEventListener('click', () => {
+        if (navigator.share) {
+            navigator.share(shareData);
+
+        } else {
+            var input = document.createElement('input');
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+
+            alert("複製成功！\n");
+            document.body.removeChild(input);
+        }
+    });
 })

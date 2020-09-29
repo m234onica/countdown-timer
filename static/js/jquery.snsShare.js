@@ -41,7 +41,7 @@ jQuery.fn.snsShare = function (message, url) {
      * Implement SNS types
      * @type {string[]}
      */
-    types = ['facebook', 'line', 'twitter', 'link'];
+    types = ['facebook', 'line', 'twitter'];
 
     // fix URL
     if (typeof (url) === 'undefined') {
@@ -72,16 +72,6 @@ jQuery.fn.snsShare = function (message, url) {
                         element = getAtagElement();
                         element.href = protocol + '//twitter.com/share?text=' + encodeURIComponent(message) + '&url=' + url;
                         element.dispatchEvent(makeMouseClickEvent());
-                        break;
-                    case 'link':
-                        var input = document.createElement('input');
-                        input.value = window.location.href;
-
-                        document.body.appendChild(input);
-                        input.select();
-                        document.execCommand('copy');
-                        alert("複製成功！\n");
-                        document.body.removeChild(input);
                         break;
                     default:
                         alert('SNS type not found. (' + options + ')');

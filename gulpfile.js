@@ -1,6 +1,6 @@
 var gulp = require("gulp"),
     concat = require("gulp-concat"),
-    uglify = require("gulp-uglify"),
+    uglify = require("gulp-uglifyes"),
     rev = require("gulp-rev"),
     revCollector = require("gulp-rev-collector"),
     imagemin = require("gulp-imagemin"),
@@ -24,7 +24,10 @@ gulp.task("clean", function () {
 gulp.task("uglify", function () {
     return gulp.src(srcJS)
         .pipe(concat("all.js"))
-        .pipe(uglify())
+        .pipe(uglify({
+            mangle: false,
+            ecma: 6
+        }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("./static/js/min/"))
 })
@@ -66,7 +69,7 @@ gulp.task("image-min", function () {
 
 gulp.task("default",
     gulp.series(
-        "clean",
+        // "clean",
         "uglify",
         "revJS",
         "revCSS",
