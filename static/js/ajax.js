@@ -26,6 +26,7 @@ function timeBetweenDates(toDate) {
         // Timer done
         clearInterval(timer);
         $(".txt").text("進入");
+        $(".timer-txt").text("已經");
         $("#title-img").attr("src", "./static/image/timeout/title2xxxhdpi.png");
     } else {
         
@@ -42,7 +43,6 @@ function timeBetweenDates(toDate) {
         $(".hours").text(hours);
         $(".minutes").text(minutes);
         $(".seconds").text(seconds);
-        $(".txt").text("距離");
     }
 }
 
