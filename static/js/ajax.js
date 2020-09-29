@@ -10,7 +10,7 @@ $.get("./marquee.txt", function (data) {
 
 // countdown timer
 var timer;
-var countDown = new Date('SEP 01, 2020 00:00:00');
+var countDown = new Date('JAN 01, 2021 00:00:00');
 
 timer = setInterval(function () {
     timeBetweenDates(countDown);
@@ -35,16 +35,18 @@ function timeBetweenDates(toDate) {
         $(".txt").text("進入");
         $(".timer-txt").text("已經");
         $("#title-img").attr("src", "./static/image/timeout/title2xxxhdpi.png");
-        $("meta[property=og:\\title]").attr("content", "進入瘦肉精豬肉元年已經"+ Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) +"秒");
-        $("meta[name=twitter:\\title]").attr("content", "進入瘦肉精豬肉元年已經" + Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) + "秒");
+        jQuery('meta[property="og:title"]').attr('content', "進入瘦肉精豬肉元年已經" + Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) + "秒");
+        jQuery('meta[name="twitter:title"]').attr('content', "進入瘦肉精豬肉元年已經" + Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) + "秒");
 
         $(".days").text(Math.abs(days));
         $(".hours").text(Math.abs(hours));
         $(".minutes").text(Math.abs(minutes));
         $(".seconds").text(Math.abs(seconds));
     } else {
-        $("meta[property=og\\:title]").attr("content", "進入瘦肉精豬肉元年已經" + days + "天" + hours + "時" + minutes + "分" + seconds + "秒");
-        $("meta[name=twitter\\:title]").attr("content", "進入瘦肉精豬肉元年已經" + days + "天" + hours + "時" + minutes + "分" + seconds + "秒");
+        jQuery('meta[property="og:title"]').attr('content', "進入瘦肉精豬肉元年已經" + Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) + "秒");
+        jQuery('meta[name="twitter:title"]').attr('content', "進入瘦肉精豬肉元年已經" + Math.abs(days) + "天" + Math.abs(hours) + "時" + Math.abs(minutes) + "分" + Math.abs(seconds) + "秒");
+
+        // $("meta[name=twitter:title]").attr("content", "進入瘦肉精豬肉元年已經" + days + "天" + hours + "時" + minutes + "分" + seconds + "秒");
         $(".days").text(days);
         $(".hours").text(hours);
         $(".minutes").text(minutes);
@@ -54,5 +56,5 @@ function timeBetweenDates(toDate) {
 
 // share link
 $(function () {
-    $(".share-btn").snsShare("", window.location.href);
+    $(".share-btn").snsShare("進入瘦肉精豬肉元年已經", window.location.href);
 })

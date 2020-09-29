@@ -53,6 +53,7 @@ jQuery.fn.snsShare = function (message, url) {
             var element, snsType = jQuery(this).attr('data-sns'), protocol;
             if (typeof (snsType) === 'string' && jQuery.inArray(snsType, types) !== -1) {
                 if (typeof (message) === 'undefined') {
+                    console.log("hi");
                     message = "";
                 }
                 protocol = location.protocol;
