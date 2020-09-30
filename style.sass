@@ -3,9 +3,10 @@ $pink: #DE7F72
 $background: #18B19D
 
 html
-    min-height: 100%
+    height: 100%
 
 body
+    min-height: 100%
     background: #18B19D url(../image/backgroundxxxhdpi.png)
     background-size: 130%
     margin: 0px
@@ -67,7 +68,7 @@ body
 #title
     width: 100%
     height: 40vh
-    min-height: 300px
+    min-height: 360px
     position: relative
 
     .txt
@@ -99,9 +100,8 @@ body
     height: 10vh
     min-height: 50px
     color: $white
-    padding: 0px
-    margin: 0px
-    margin-bottom: 10px
+    padding: 10px 0px
+    margin-top: 0px
     position: relative
     text-align: center
 
@@ -130,7 +130,7 @@ body
     .line-bottom
         width: 50vw
         height: 2px
-        padding-top: 32px
+        padding-top: 25px
         position: absolute
 
     .pig-img
@@ -156,6 +156,8 @@ body
             width: 5.5%
 
 @media only screen and (max-width: 1400px)
+    #title
+        min-height: 300px
     #timer
         li.time-unit
             font-size: 2rem
@@ -165,11 +167,16 @@ body
             font-size: 2.2rem
             height: 2.6rem
             padding: 0px 5px 3px 5px
+    #footer
+        .line-bottom
+            padding: 0px
+        .pig-img
+            padding: 0px
 
 @media only screen and (max-width: 1200px)
     #title
-        height: 40vh
-        min-height: 280px
+        height: 35vh
+        min-height: 250px
         .line-top
             top: 15vh
         .txt
@@ -219,9 +226,13 @@ body
         .share
             font-size: 1.1rem
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 900px)
     #title
         min-height: 200px
+
+@media only screen and (max-width: 800px)
+    #title
+        min-height: 180px
 
 @media only screen and (max-width: 768px)
     .container
