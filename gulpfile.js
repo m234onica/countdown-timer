@@ -69,7 +69,7 @@ gulp.task("image-min", function () {
 
 gulp.task("default",
     gulp.series(
-        // "clean",
+        "clean",
         "uglify",
         "revJS",
         "revCSS",
