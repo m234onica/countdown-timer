@@ -1,6 +1,8 @@
 var gulp = require("gulp"),
     concat = require("gulp-concat"),
     uglify = require("gulp-uglifyes"),
+    fs = require("fs"),
+    twig = require("gulp-twig"),
     rev = require("gulp-rev"),
     revCollector = require("gulp-rev-collector"),
     imagemin = require("gulp-imagemin"),
@@ -56,6 +58,18 @@ gulp.task("revHTML", function () {
         .pipe(gulp.dest("docs/"));
 });
 
+gulp.task("compile", function () {
+
+    var config = JSON.parse(fs.readFileSync("./static/dist/config.json"));
+    return gulp.src("./docs/*.html")
+        .pipe(twig({
+            data: {
+                domain: config.domain
+            }
+        }))
+        .pipe(gulp.dest("docs/"));
+})
+
 gulp.task("txt", function () {
     return gulp.src("./marquee.txt")
         .pipe(gulp.dest("docs/"))
@@ -74,6 +88,7 @@ gulp.task("default",
         "revJS",
         "revCSS",
         "revHTML",
+        "compile",
         "txt",
         // "image-min",
     ), function (done) {
