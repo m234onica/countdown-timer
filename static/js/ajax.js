@@ -77,6 +77,11 @@ $(function () {
             alert("複製成功！\n");
             document.body.removeChild(input);
         }
+
+        gtag('event', 'Share', {
+            'event_category': 'UIEvent',
+            'event_label': 'Native'
+        });
     });
 
     document.addEventListener('touchstart', function (event) {
@@ -84,7 +89,7 @@ $(function () {
             event.preventDefault();
         }
     });
-    
+
     var lastTouchEnd = 0;
     document.addEventListener('touchend', function (event) {
         var now = (new Date()).getTime();

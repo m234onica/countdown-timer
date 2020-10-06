@@ -62,17 +62,38 @@ jQuery.fn.snsShare = function (message, url) {
                         element = getAtagElement();
                         element.href = protocol + '//www.facebook.com/sharer.php?u=' + url + '&t=' + encodeURIComponent(message);
                         element.dispatchEvent(makeMouseClickEvent());
+
+                        gtag('event', 'Share', {
+                            'event_category': 'UIEvent',
+                            'event_label': 'Facebook'
+                        });
+
                         break;
+
                     case 'line':
                         element = getAtagElement();
                         element.href = protocol + '//line.naver.jp/R/msg/text/?' + encodeURIComponent(message + ' ' + url);
                         element.dispatchEvent(makeMouseClickEvent());
+
+                        gtag('event', 'Share', {
+                            'event_category': 'UIEvent',
+                            'event_label': 'LINE'
+                        });
+
                         break;
+
                     case 'twitter':
                         element = getAtagElement();
                         element.href = protocol + '//twitter.com/share?text=' + encodeURIComponent(message) + '&url=' + url;
                         element.dispatchEvent(makeMouseClickEvent());
+
+                        gtag('event', 'Share', {
+                            'event_category': 'UIEvent',
+                            'event_label': 'Twitter'
+                        });
+
                         break;
+
                     default:
                         alert('SNS type not found. (' + options + ')');
                 }
