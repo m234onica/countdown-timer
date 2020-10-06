@@ -14,7 +14,7 @@ body
     color: $white
     margin: 0 auto
     width: 100%
-    height: 30px
+    height: 3vh
     white-space: nowrap
     overflow: hidden
     position: relative
@@ -62,13 +62,14 @@ body
     margin-left: auto
     padding-right: 15px
     padding-left: 15px
-    width: 60%
+    width: 50%
+    height: 95%
     max-width: 1140px
     font-size: 20px
 
 #title
     width: 100%
-    height: 5%
+    height: 35%
     min-height: 5%
     position: relative
     margin: 10px 0px
@@ -94,33 +95,33 @@ body
         margin: 5px 0px
 
     img
-        width: 100%
+        width: 95%
         top: 10%
         position: absolute
         z-index: 2
-        margin: 10px 0px
+        margin: 10px 2.5%
 
 #timer
     width: 100%
-    height: 10%
+    height: 12%
     min-height: 50px
     color: $white
     padding: 0
-    margin: 2% 0
+    margin: 5% 0
     position: relative
     text-align: center
 
     li.time-unit
         display: inline-block
-        font-size: 2.8rem
+        font-size: 2.5rem
         text-align: center
 
     .days, .hours, .minutes, .seconds
-        min-width: 4rem
-        height: 4rem
-        padding: 1px 14px 2px 14px
+        min-width: 3.2rem
+        height: 3.2rem
+        padding: 0px 14px 10px 14px
         text-align: center
-        font-size: 3.2rem
+        font-size: 3rem
         font-weight: bold
         border-radius: 10px
         background: $white
@@ -139,7 +140,7 @@ body
         position: absolute
 
     .pig-img
-        width: 75%
+        width: 70%
         left: -5%
         padding-top: 10px
         position: absolute
@@ -160,9 +161,9 @@ body
             padding: 10px 1.5px
             width: 5.5%
 
-@media only screen and (min-width: 1440px)
+@media only screen and (min-width: 1441px)
     #title
-        min-height: 500px
+        height: 400px
         .line-top
             top: 25%
         .txt
@@ -170,6 +171,7 @@ body
             font-size: 3rem
 
     #timer
+        margin: 0 0 5% 0
         li.time-unit
             padding-top: 20px
 
@@ -179,12 +181,9 @@ body
         .pig-img
             padding: 0px
 
-@media only screen and (max-width: 1500px)
+@media only screen and (max-width: 1440px)
     #title
-        min-height: 400px
-
-@media only screen and (max-width: 1400px)
-    #title
+        min-height: 300px
         .line-top
             top: 22%
         .txt
@@ -198,31 +197,33 @@ body
 
     #timer
         li.time-unit
-            font-size: 3rem
-            margin-top: 10px
-
-        .days, .hours, .minutes, .seconds
-            font-size: 3rem
-            min-width: 3.2rem
-            height: 3.4rem
-            padding-bottom: 5px
-
-@media only screen and (max-width: 1200px)
-    #title
-        min-height: 400px
-    #timer
-        li.time-unit
             font-size: 2.2rem
             margin-top: 10px
 
         .days, .hours, .minutes, .seconds
             font-size: 2.5rem
-            min-width: 2.8rem
+            min-width: 3rem
             height: 3rem
+            padding-bottom: 5px
+
+@media only screen and (max-width: 1200px)
+    .container
+        width: 60%
+    #title
+        min-height: 300px
+    #timer
+        li.time-unit
+            font-size: 1.8rem
+            margin-top: 10px
+
+        .days, .hours, .minutes, .seconds
+            font-size: 2rem
+            min-width: 2.2rem
+            height: 2.5rem
 
 @media only screen and (max-width: 950px)
     #title
-        min-height: 300px
+        min-height: 220px
         .line-top
             top: 25%
 
@@ -234,7 +235,7 @@ body
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
                 min-width: 2rem
-                height: 2.2rem
+                height: 2.6rem
                 padding-bottom: 0px
 
 @media only screen and (max-width: 800px)
@@ -249,7 +250,6 @@ body
             .days, .hours, .minutes, .seconds
                 font-size: 1.8rem
                 min-width: 2rem
-                height: 2rem
 
 @media only screen and (max-width: 768px)
     .container
@@ -258,7 +258,7 @@ body
         padding: 0 auto
 
     #title
-        min-height: 350px
+        min-height: 250px
         .txt
             top: 15%
             width: 100%
@@ -268,7 +268,6 @@ body
             width: 100%
             top: 20%
         img
-            width: 100%
             top: 3%
     #timer
         li.time-unit
@@ -286,8 +285,9 @@ body
             position: relative
 
         .pig-img
-            width: 100%
+            width: 90%
             padding-top: 30px
+            margin: 0 5%
             left: 0%
             position: relative
 
@@ -300,28 +300,23 @@ body
             img
                 width: 10%
 
-@media only screen and (max-width: 700px)
-    #title
-        min-height: 300px
-
 @media only screen and (max-width: 600px)
     #title
-        min-height: 280px
+        min-height: 200px
         .txt
             top: 13%
     #timer
         li.time-unit
-            font-size: 2rem
+            font-size: 1.8rem
             padding-top: 5px
 
             .days, .hours, .minutes, .seconds
-                font-size: 2.2rem
+                font-size: 2rem
                 height: 2.5rem
-                padding-bottom: 5px
+                padding: 0px 8px 5px 8px
 
 @media only screen and (max-width: 520px)
     #title
-        min-height: 200px
         .txt
             top: 12%
             font-size: 1.5rem
@@ -333,8 +328,8 @@ body
 
             .days, .hours, .minutes, .seconds
                 font-size: 1.8rem
+                min-width: 2rem
                 height: 2.2rem
-                padding-bottom: 5px
 
 @media only screen and (max-width: 480px)
     .marquee
@@ -342,7 +337,7 @@ body
             width: 2000%
             animation: marquee 100s linear infinite forwards
     #title
-        min-height: 200px
+        min-height: 180px
         .txt
             top: 14%
             font-size: 1.2rem
@@ -363,13 +358,13 @@ body
 
 @media only screen and (max-width: 380px)
     #title
-        min-height: 150px
+        min-height: 120px
     #timer
         width: 100%
         min-height: 20px
 
         li.time-unit
-            font-size: 1.3rem
+            font-size: 1rem
 
         .days, .hours, .minutes, .seconds
             font-size: 1.3rem
@@ -384,3 +379,34 @@ body
 
         .share
             font-size: 1.2rem
+
+@media only screen and (min-width: 3000px)
+    .container
+        max-width: 2800px
+
+    #title
+        min-height: 800px
+        .line-top
+            height: 5px
+        .txt
+            font-size: 5rem
+
+    #timer
+        margin: 5% 0
+
+        li.time-unit
+            font-size: 7rem
+            padding: 5px 14px 10px 14px
+            .days, .hours, .minutes, .seconds
+                font-size: 8rem
+                height: 8.5rem
+                min-width: 9rem
+                padding-bottom: 10%
+    
+    #footer
+        .line-bottom
+            height: 5px
+        .share
+            font-size: 3.5rem
+            img
+                width: 10.5%
