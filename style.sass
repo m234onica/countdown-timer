@@ -14,7 +14,7 @@ body
     color: $white
     margin: 0 auto
     width: 100%
-    height: 3vh
+    height: 30px
     white-space: nowrap
     overflow: hidden
     position: relative
@@ -118,8 +118,7 @@ body
 
     .days, .hours, .minutes, .seconds
         min-width: 3.2rem
-        height: 3.2rem
-        padding: 0px 14px 10px 14px
+        padding: 0px 10px
         text-align: center
         font-size: 3rem
         font-weight: bold
@@ -203,8 +202,6 @@ body
         .days, .hours, .minutes, .seconds
             font-size: 2.5rem
             min-width: 3rem
-            height: 3rem
-            padding-bottom: 5px
 
 @media only screen and (max-width: 1200px)
     .container
@@ -219,7 +216,6 @@ body
         .days, .hours, .minutes, .seconds
             font-size: 2rem
             min-width: 2.2rem
-            height: 2.5rem
 
 @media only screen and (max-width: 950px)
     #title
@@ -235,8 +231,6 @@ body
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
                 min-width: 2rem
-                height: 2.6rem
-                padding-bottom: 0px
 
 @media only screen and (max-width: 800px)
     #title
@@ -276,7 +270,6 @@ body
 
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
-                height: 3rem
 
     #footer
         .line-bottom
@@ -312,8 +305,6 @@ body
 
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
-                height: 2.5rem
-                padding: 0px 8px 5px 8px
 
 @media only screen and (max-width: 520px)
     #title
@@ -329,7 +320,6 @@ body
             .days, .hours, .minutes, .seconds
                 font-size: 1.8rem
                 min-width: 2rem
-                height: 2.2rem
 
 @media only screen and (max-width: 480px)
     .marquee
@@ -337,7 +327,7 @@ body
             width: 2000%
             animation: marquee 100s linear infinite forwards
     #title
-        min-height: 180px
+        min-height: 150px
         .txt
             top: 14%
             font-size: 1.2rem
@@ -348,17 +338,27 @@ body
         padding: 0px
 
         li.time-unit
-            font-size: 1.5rem
+            font-size: 1.3rem
 
-        .days, .hours, .minutes, .seconds
-            font-size: 1.8rem
-            height: 2.3rem
-            padding: 1px 3px 2px 2px
-            border-radius: 6px
+            .days, .hours, .minutes, .seconds
+                font-size: 1.5rem
+                border-radius: 6px
+                padding: 3px
+
+@media only screen and (max-width: 420px)
+    #timer
+        width: 100%
+        min-height: 50px
+
+        li.time-unit
+            font-size: 1.1rem
+
+            .days, .hours, .minutes, .seconds
+                font-size: 1.3rem
 
 @media only screen and (max-width: 380px)
     #title
-        min-height: 120px
+        min-height: 130px
     #timer
         width: 100%
         min-height: 20px
@@ -366,12 +366,10 @@ body
         li.time-unit
             font-size: 1rem
 
-        .days, .hours, .minutes, .seconds
-            font-size: 1.3rem
-            max-width: 1.5rem
-            height: 1.5rem
-            padding: 1px 2px 4px 0px
-            border-radius: 8px
+            .days, .hours, .minutes, .seconds
+                font-size: 1rem
+                padding: 0
+                max-width: 1.5rem
 
     #footer
         .line-bottom
@@ -381,6 +379,12 @@ body
             font-size: 1.2rem
 
 @media only screen and (min-width: 3000px)
+    .marquee
+        margin: 0 auto
+        height: 4vh
+        &__content
+            font-size: 4rem
+            line-height: 4vh
     .container
         max-width: 2800px
 
@@ -393,16 +397,14 @@ body
 
     #timer
         margin: 5% 0
-
         li.time-unit
             font-size: 7rem
             padding: 5px 14px 10px 14px
             .days, .hours, .minutes, .seconds
+                border-radius: 10%
                 font-size: 8rem
-                height: 8.5rem
                 min-width: 9rem
-                padding-bottom: 10%
-    
+
     #footer
         .line-bottom
             height: 5px
