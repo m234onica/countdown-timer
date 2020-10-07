@@ -186,8 +186,8 @@ body
         .line-top
             top: 22%
         .txt
-            top: 18%
-            font-size: 2rem
+            top: 15%
+            font-size: 1.8rem
         img
             top: 10%
     #footer
@@ -210,16 +210,24 @@ body
         min-height: 300px
     #timer
         li.time-unit
-            font-size: 1.8rem
+            font-size: 2rem
             margin-top: 10px
 
         .days, .hours, .minutes, .seconds
-            font-size: 2rem
-            min-width: 2.2rem
+            font-size: 2.2rem
+
+@media only screen and (max-width: 1100px)
+    #title
+        min-height: 280px
+
+@media only screen and (max-width: 1000px)
+    #title
+        min-height: 250px
 
 @media only screen and (max-width: 950px)
     #title
-        min-height: 220px
+        .txt
+            top: 16%
         .line-top
             top: 25%
 
@@ -227,23 +235,32 @@ body
         li.time-unit
             font-size: 1.8rem
             margin-top: 10px
-
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
-                min-width: 2rem
 
-@media only screen and (max-width: 800px)
-    #title
-        min-height: 250px
-
+@media only screen and (max-width: 950px)
     #timer
         li.time-unit
             font-size: 1.5rem
             margin-top: 10px
-
             .days, .hours, .minutes, .seconds
                 font-size: 1.8rem
-                min-width: 2rem
+
+@media only screen and (max-width: 800px)
+    #title
+        min-height: 250px
+        .txt
+            top: 19%
+            font-size: 1.5rem
+
+    #timer
+        li.time-unit
+            font-size: 1.3rem
+            padding-top: 5px
+
+            .days, .hours, .minutes, .seconds
+                font-size: 1.5rem
+                min-width: 40px
 
 @media only screen and (max-width: 768px)
     .container
@@ -254,7 +271,7 @@ body
     #title
         min-height: 250px
         .txt
-            top: 15%
+            top: 12%
             width: 100%
             font-size: 1.8rem
 
@@ -265,11 +282,11 @@ body
             top: 3%
     #timer
         li.time-unit
-            font-size: 2rem
+            font-size: 2.2rem
             padding-top: 5px
 
             .days, .hours, .minutes, .seconds
-                font-size: 2rem
+                font-size: 2.5rem
 
     #footer
         .line-bottom
@@ -293,11 +310,20 @@ body
             img
                 width: 10%
 
+@media only screen and (max-width: 750px)
+    #timer
+        li.time-unit
+            font-size: 2rem
+            padding-top: 5px
+
+            .days, .hours, .minutes, .seconds
+                font-size: 2rem
+
 @media only screen and (max-width: 600px)
     #title
         min-height: 200px
         .txt
-            top: 13%
+            top: 10%
     #timer
         li.time-unit
             font-size: 1.8rem
@@ -306,12 +332,7 @@ body
             .days, .hours, .minutes, .seconds
                 font-size: 2rem
 
-@media only screen and (max-width: 520px)
-    #title
-        .txt
-            top: 12%
-            font-size: 1.5rem
-
+@media only screen and (max-width: 570px)
     #timer
         li.time-unit
             font-size: 1.6rem
@@ -319,17 +340,24 @@ body
 
             .days, .hours, .minutes, .seconds
                 font-size: 1.8rem
-                min-width: 2rem
+                padding: 3px
+
+@media only screen and (max-width: 520px)
+    #title
+        .txt
+            top: 12%
+            font-size: 1.5rem
 
 @media only screen and (max-width: 480px)
     .marquee
         .marquee__content
             width: 2000%
             animation: marquee 100s linear infinite forwards
+
     #title
-        min-height: 150px
+        min-height: 180px
         .txt
-            top: 14%
+            top: 12%
             font-size: 1.2rem
 
     #timer
@@ -339,11 +367,21 @@ body
 
         li.time-unit
             font-size: 1.3rem
-
             .days, .hours, .minutes, .seconds
                 font-size: 1.5rem
                 border-radius: 6px
                 padding: 3px
+
+@media only screen and (max-width: 440px)
+    #title
+        min-height: 150px
+    #timer
+        li.time-unit
+            font-size: 1.3rem
+
+            .days, .hours, .minutes, .seconds
+                font-size: 1.5rem
+                padding: 0
 
 @media only screen and (max-width: 420px)
     #timer
@@ -355,55 +393,67 @@ body
 
             .days, .hours, .minutes, .seconds
                 font-size: 1.3rem
+                min-width: 40px
 
 @media only screen and (max-width: 380px)
     #title
         min-height: 130px
-    #timer
-        width: 100%
-        min-height: 20px
+        margin-bottom: 0px
+        .txt
+            font-size: 1rem
 
+    #timer
+        min-height: 20px
         li.time-unit
             font-size: 1rem
 
             .days, .hours, .minutes, .seconds
                 font-size: 1rem
-                padding: 0
-                max-width: 1.5rem
+                min-width: 35px
 
     #footer
         .line-bottom
             padding-top: 0px
-
         .share
             font-size: 1.2rem
 
-@media only screen and (min-width: 3000px)
+@media only screen and (max-width: 330px)
+    #title
+        margin-top: 0px
+    #timer
+        margin-top: 0px
+        li.time-unit
+            .days, .hours, .minutes, .seconds
+                min-width: 25px
+
+@media only screen and (min-width: 2000px)
     .marquee
         margin: 0 auto
-        height: 4vh
+        height: 80px
         &__content
             font-size: 4rem
-            line-height: 4vh
+            line-height: 80px
     .container
         max-width: 2800px
 
     #title
-        min-height: 800px
+        min-height: 550px
+        margin-bottom: 5%
         .line-top
             height: 5px
         .txt
             font-size: 5rem
-
+    
     #timer
         margin: 5% 0
         li.time-unit
-            font-size: 7rem
+            font-size: 3rem
             padding: 5px 14px 10px 14px
+
             .days, .hours, .minutes, .seconds
                 border-radius: 10%
-                font-size: 8rem
-                min-width: 9rem
+                font-size: 3.5rem
+                padding: 2px 20px
 
     #footer
         .line-bottom
@@ -412,3 +462,22 @@ body
             font-size: 3.5rem
             img
                 width: 10.5%
+
+@media only screen and (min-width: 3000px)
+    #title
+        min-height: 700px
+
+    #timer
+        margin: 5% 0
+        li.time-unit
+            font-size: 5rem
+            padding: 5px 14px 10px 14px
+
+            .days, .hours, .minutes, .seconds
+                border-radius: 10%
+                font-size: 5.5rem
+                padding: 2px 30px
+
+@media only screen and (min-width: 3000px)
+    #title
+        min-height: 800px
